@@ -1,9 +1,12 @@
 ﻿#include <iostream>
 #include <fstream>
 using namespace std;
-std::ifstream ent("input.txt");
-std::ofstream esc("output.txt");
+#ifdef _DEBUG
 
+
+std::ifstream cin("input.txt");
+std::ofstream cout("output.txt");
+#endif
 int input();
 int output();
 int solve();
