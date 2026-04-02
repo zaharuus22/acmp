@@ -1,24 +1,22 @@
 ﻿#include <iostream>
 #include <fstream>
 using namespace std;
-#ifdef _DEBUG
+std::ifstream ent("input.txt");
+std::ofstream esc("output.txt");
 
-
-std::ifstream cin("input.txt");
-std::ofstream cout("output.txt");
-#endif
+long long n, a, b, ans;
 int input();
 int output();
 int solve();
 int input() {
-
+    ent >> n >> a >> b;
     
     return 0;
 }
 
 int solve() {
    
-
+    ans = n * a * b;
 
 
 
@@ -29,7 +27,7 @@ int solve() {
 
 int output() {
 
-
+    esc << ans * 2;
     return 0;
 }
 
