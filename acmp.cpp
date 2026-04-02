@@ -10,6 +10,7 @@ int mx, mn;
 int input();
 int output();
 int solve();
+int bubble();
 int input() {
 	for (int i = 0; i < 3; i++) {
 		ent >> ms[i];
@@ -17,28 +18,27 @@ int input() {
 	return 0;
 }
 
+int bubble() {
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < (n - 1); j++) {
+            if (ms[j] > ms[j + 1]) {
+                a = ms[j];
+                b = ms[j + 1];
+                ms[j] = b;
+                ms[j + 1] = a;
+
+            }
+
+        }
+
+
+    }
+    return 0;
+}
 int solve() {
 
-	for (int i = 0; i < 3; i++) {
-		if (ms[i] > ms[i + 1]) {
-			mx = ms[i];
-
-		}
-		
-
-		
-	}
-	for (int i = 0; i < 3; i++) {
-		if (ms[i] > ms[i+1]) {
-			mn = ms[i+1];
-
-		}
-		else {
-			mn = ms[i];
-		}
-	}
-
-		return 0;
+	
 }
 
 
