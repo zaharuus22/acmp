@@ -2,16 +2,17 @@
 #include <fstream>
 using namespace std;
 #ifdef _DEBUG
+#define cin ent
+#define cout esc
 
-
-std::ifstream cin("input.txt");
-std::ofstream cout("output.txt");
+std::ifstream ent("input.txt");
+std::ofstream esc("output.txt");
 #endif
 int input();
 int output();
 int solve();
 int input() {
-
+    
     
     return 0;
 }
