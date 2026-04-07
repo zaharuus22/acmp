@@ -64,7 +64,10 @@ int solve() {
 
 
 int output() {
-	
+	for (int i = 0; i < n; i++) {
+
+		cout << s << "\n";
+	}
 
 	return 0;
 }
