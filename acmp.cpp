@@ -10,53 +10,45 @@ std::ofstream esc("output.txt");
 #endif
 long long n, m;
 long long s;
-long long ms[1009][1009];
+long long ms[10009];
 int input();
 int output();
 int solve();
 int input() {
 	cin >> n >> m;
-	
+
 	return 0;
 }
-int elder(long long ans, long long dg) {
-	if (ans % 10 == dg) {
-		s++;
-
-	}
 
 
-}
-int safik(int dg) {
-	for (int x = 1; x <= n; x++) {
-		for (int y = 1; y <= m; y++) {
-
-			
-
-		}
-
-
-	}
-
-
-
-}
 int solve() {
-	for (int x = 1; x <= n ; x++) {
-		for (int y = 1; y <= m; y++) {
 
-			ms[x][y] = x * y;
+	
+	
+		for (int i = 1; i <= n; i++)//уточнить
+		{
+			for (int j = 1; j <= m; j++)
+			{
+				long long ans;
+				ans = i * j;
+				while (ans != 0) {
+					long long s;
+					s = ans % 10;
+
+					ms[s] += 1;
+
+					ans = ans / 10;
+
+
+
+				}
+
+
+			}
+
 
 		}
-
-
-	}
-	for (int dg = 0; dg <= 9; dg++) {
-		safik(dg);
-
-	}
-
-
+	
 
 	return 0;
 }
@@ -64,11 +56,10 @@ int solve() {
 
 
 int output() {
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i <= 9; i++) {
 
-		cout << s << "\n";
+		cout << ms[i] << "\n";
 	}
-
 	return 0;
 }
 
