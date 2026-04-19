@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 #ifdef _DEBUG
 #define cin ent
@@ -8,58 +9,109 @@ using namespace std;
 std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
 #endif
-long long n, m;
-long long s;
-long long ms[10009];
+long long a, b, c;
+long long mn, mx;
 int input();
 int output();
 int solve();
 int input() {
-	cin >> n >> m;
+	cin >> a >> b >> c;
+	if (a > b) {
+
+		mx = a;
+		mn = b;
+		a = mn;
+		b = mx;
+	}
+	if (b > c) {
+		mx = b;
+		mn = c;
+		b = mn;
+		c = mx;
+	}
+	if (a > b) {
+
+		mx = a;
+		mn = b;
+		a = mn;
+		b = mx;
+	}
+	if (b > c) {
+		mx = b;
+		mn = c;
+		b = mn;
+		c = mx;
+	}
+	if (a > b) {
+
+		mx = a;
+		mn = b;
+		a = mn;
+		b = mx;
+	}
+	if (b > c) {
+		mx = b;
+		mn = c;
+		b = mn;
+		c = mx;
+	}
+	return 0;
+}
+
+int swap() {
+	if (a > b) {
+
+		mx = a;
+		mn = b;
+
+
+	}
 
 	return 0;
 }
 
 
+
 int solve() {
 
+	if (((c == 0) and (a == 0)) or ((c == 0) and (b == 0)) or ((a == 0) and (b == 0)) or (a == 0) or (b == 0) or (c == 0)) {
+		cout << "impossible";
+		exit(0);
+
+	}
+	if (c >= (a + b)) {
+		cout << "impossible";
+		exit(0);
+
+	}
 	
-	
-		for (int i = 1; i <= n; i++)//уточнить
-		{
-			for (int j = 1; j <= m; j++)
-			{
-				long long ans;
-				ans = i * j;
-				while (ans != 0) {
-					long long s;
-					s = ans % 10;
+	if (a == b and a == c) {
 
-					ms[s] += 1;
+		cout << "acute";
+		exit(0);
+	}
+	if ((c * c) == (a * a) + (b * b)) {
 
-					ans = ans / 10;
+		cout << "right";
+		exit(0);
+	}
+	if ((c * c) < (a * a) + (b * b)) {
+		cout << "acute";
+		exit(0);
+	}
+	if ((c * c) > (a * a) + (b * b)) {
 
+		cout << "obtuse";
 
-
-				}
-
-
-			}
-
-
-		}
-	
-
+	}
 	return 0;
 }
 
 
 
 int output() {
-	for (int i = 0; i <= 9; i++) {
 
-		cout << ms[i] << "\n";
-	}
+
 	return 0;
 }
 
