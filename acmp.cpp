@@ -79,7 +79,7 @@ int solve() {
 		exit(0);
 
 	}
-	if (c > (a + b)) {
+	if (c >= (a + b)) {
 		cout << "impossible";
 		exit(0);
 
