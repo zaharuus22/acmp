@@ -8,18 +8,28 @@ using namespace std;
 std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
 #endif
+long long a,b;
 int input();
 int output();
 int solve();
 int input() {
-    
+    cin >> a >> b;
     
     return 0;
 }
 
 int solve() {
-   
+    
+    for (int i = a; i <= b; i++) {
 
+        if (a % 2 == 0) {
+            cout << i << " ";
+
+        }
+        
+        a++;
+
+    }
 
 
 
@@ -29,8 +39,7 @@ int solve() {
 
 
 int output() {
-
-
+  
     return 0;
 }
 
