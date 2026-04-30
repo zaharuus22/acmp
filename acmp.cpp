@@ -8,11 +8,12 @@ using namespace std;
 std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
 #endif
+int a, b, c, d;
 int input();
 int output();
 int solve();
 int input() {
-    
+    cin >> a >> b >> c >> d;
     
     return 0;
 }
@@ -20,7 +21,15 @@ int input() {
 int solve() {
    
 
+    for (int i = a; i <= b; i++) {
 
+        if (i%d == c) {
+
+            cout << i << " ";
+
+        }
+
+    }
 
 
     return 0;
