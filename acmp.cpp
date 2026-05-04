@@ -22,9 +22,15 @@ int input() {
 
 int solve() {
 
-
 		
-	
+		
+	if (n == 1) {
+		cout << 11;
+
+		}
+	else {
+
+
 		for (int i = 9; i >= 2; i--) {
 			while (n % i == 0) {
 				ms[s] = i;
@@ -36,7 +42,7 @@ int solve() {
 
 		}
 		cout << ms[0] << ms[1];
-	
+	}
 
 
 
