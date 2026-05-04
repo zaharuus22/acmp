@@ -9,6 +9,7 @@ std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
 #endif
 long long n;
+//2540160
 int input();
 int output();
 int solve();
@@ -19,36 +20,21 @@ int input() {
 }
 
 int solve() {
-	for (int i = 0; i < n; i++) {
-		long long d;
-		long long s = 0;
-		long long ms[1000];
-		cin >> d;
-		long long m = d;
+	long long ms[1000];
+	long long s = 0;
+	while (n != 0) {
 
-		while (d != 0) {
-			if (d % 2 == 0) {
-				cout << 0;
-				ms[s] = 0;
 
-			}
-			else {
-				cout << 1;
-				ms[s] = 1;
+		cout << n % 10;
+		ms[s] = n % 10;
+		s++;
 
-			}
-			s++;
-			d = d / 2;
-		}
-		cout << " " << s;
-		cout << " ";
-		/*for (int i = 0; i < s; i++) */
-		for (int i = s - 1;i >= 0 ; i--) {
-			cout << ms[i];
-		}
-		cout << "\n";
-		d = m;
+
+
 	}
+
+
+
 
 	return 0;
 }
@@ -57,6 +43,7 @@ int solve() {
 
 int output() {
 
+	cout << n;
 
 	return 0;
 }
@@ -65,10 +52,7 @@ int main()
 {
 
 	input();
-	for (int i = 0; i < 3; i++) {
-
-		solve();
-	}
+	solve();
 	output();
 	return 0;
 }
