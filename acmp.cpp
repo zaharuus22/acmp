@@ -11,6 +11,7 @@ std::ofstream esc("output.txt");
 int n;
 int ms[10000];
 int s = 0;
+bool t;
 int input();
 int output();
 int solve();
@@ -21,27 +22,43 @@ int input() {
 }
 
 int solve() {
-
-		
-		
 	if (n == 1) {
+
 		cout << 11;
+		t += 1;
+	}
+	else if (n < 10) {
+		cout << 1;
+		t += 1;
+	}
+
+
+
+
+
+	for (int i = 9; i >= 2; i--) {
+		while (n % i == 0) {
+			ms[s] = i;
+			s++;
+			n = n / i;
 
 		}
+
+
+	}
+	for (int i = s - 1; i >= 0; i--) {
+
+		cout << ms[i];
+		t += 1;
+	}
+	if (t == 0) {
+
+		cout << "No solution";
+	}
 	else {
 
 
-		for (int i = 9; i >= 2; i--) {
-			while (n % i == 0) {
-				ms[s] = i;
-				s++;
-				n = n / i;
 
-			}
-
-
-		}
-		cout << ms[0] << ms[1];
 	}
 
 
