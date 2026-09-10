@@ -27,50 +27,44 @@ using namespace std;
 
 
 
+char ch;
+long long w = 0, mx = 0;
+
+ifstream in("input.txt");
+ofstream out("output.txt");
+int z(int y) {
+
+	for (int x = 0; x < 10; x++) {
+		if (x + y == 9) {
+			out << 2;
+		}
+		else {
+			if (x == y) {
+				out << 1;
+			}
+			else {
+				out << 0;
+			}
+		}
+
+	}
 
 
-long long a, b;
-long long w = 0, q = 0, r = 0, t = 0;
-
-
-
+	return 1;
+}
 int main() {
 
-    ifstream in("input.txt");
-    ofstream out("output.txt");
+
+	for (int y = 0; y < 10; y++) {
+		z(y);
+		out << "\n";
 
 
-    in >> a >> b;
-
-   
-
-    while ((a != 0) or (b != 0)) {
-        w = (a % 10);
-        a = a / 10;
-        q = (b % 10);
-        b = b / 10;
-        r = w + q + t;
-        if (r >= 10) {
-            r -= 10;
-            t = 1;
-      }
-        else {
-
-            t = 0;
-        }
-
-        out << r;
-
-    }
-    if (t == 1) {
-
-        out << t;
-  }
-
-
+	}
 
 
 }
+
 
 
 
