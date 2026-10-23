@@ -1,44 +1,34 @@
 ﻿#include <iostream>
 #include <fstream>
-using namespace std;
-#ifdef _DEBUG
-#define cin ent
-#define cout esc
-
-std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
-#endif
-int input();
-int output();
-int solve();
-int input() {
-    
-    
-    return 0;
-}
+std::ifstream ent("input.txt");
+using namespace std;
+int main() {
+	int n;
+	ent >> n;
+	int a, b;
+	int mx = 0, mn = 100;
+	while (n != 0) {
+		ent >> a >> b;
+		if (mx < a) {
+			mx = a;
+		}
+		if (mn > b) {
+			mn = b;
+		}
 
-int solve() {
-   
+		n--;
+	}
+	int q = mn - mx;
+	if (q >= 0) {
+		esc << "YES";
+	}
+	else {
+		esc << "NO";
+
+	}
+
+	
 
 
-
-
-    return 0;
-}
-
-
-
-int output() {
-
-
-    return 0;
-}
-
-int main()
-{
-
-    input();
-    solve();
-    output();
-    return 0;
 }
