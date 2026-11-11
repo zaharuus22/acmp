@@ -1,44 +1,43 @@
 ﻿#include <iostream>
 #include <fstream>
+#include <vector>
+#include <queue>
 using namespace std;
-#ifdef _DEBUG
-#define cin ent
-#define cout esc
+int main() {
 
-std::ifstream ent("input.txt");
-std::ofstream esc("output.txt");
-#endif
-int input();
-int output();
-int solve();
-int input() {
-    
-    
-    return 0;
-}
+	ofstream esc("output.txt");
+	ifstream ent("input.txt");
 
-int solve() {
-   
+	ios_base::sync_with_stdio(0);
+	ent.tie(0);
+	deque <int> v(100, 10);
+	for (int i = 0; i < 100; i++) {
+		v.push_back(5);
 
 
+	}
+	for (int i = 0; i < 50; i++) {
+		v.pop_back();
 
 
-    return 0;
-}
+	}
+	for (int i = 0; i < 20; i++) {
+		v.pop_front();
 
 
+	}
+	for (int i = 0; i < 50; i++) {
+		v.push_front(66);
 
-int output() {
+
+	}
+	for (int i = 0; i < v.size(); i++)
+	{
+
+		esc << v[i]<<"\n";
 
 
-    return 0;
-}
+	}
 
-int main()
-{
 
-    input();
-    solve();
-    output();
-    return 0;
 }
