@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
+#include <queue>
+#include <set>
 using namespace std;
 #ifdef _DEBUG
 #define cin ent
@@ -8,37 +10,35 @@ using namespace std;
 std::ifstream ent("input.txt");
 std::ofstream esc("output.txt");
 #endif
-int input();
-int output();
-int solve();
-int input() {
-    
-    
-    return 0;
-}
 
-int solve() {
-   
+int main() {
+
+	set <int> d = { 10 , 4 , 50 , 105 };
+	d.insert(5);
+	for (auto i = d.end(); i != d.begin();)
+	{
+		--i;
+		esc << *i << "\n";
 
 
+	}
+
+	for (auto i = d.begin(); i != d.end(); i++) {
+
+		
+		esc << *i << "\n";
 
 
-    return 0;
-}
+	}
+	if (d.end() != d.find(40)) {
+		esc << "Yes";
+
+
+	}
+	else {
+		esc << "No";
+	}
 
 
 
-int output() {
-
-
-    return 0;
-}
-
-int main()
-{
-
-    input();
-    solve();
-    output();
-    return 0;
 }
